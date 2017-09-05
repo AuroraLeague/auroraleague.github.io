@@ -1,0 +1,72 @@
+hr.teams {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+    text-align: center;
+}
+
+hr.teams:after {
+    content: "Equipos";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+}
+
+.thumb-list {
+    text-align: center;
+}
+
+ul.thumb-list {
+    list-style-type: none;
+}
+
+ul.thumb-list li.thumb-list {
+    display: inline-block;
+    margin-bottom: 150px;
+}
+
+.thumb-image {
+    width: 250px;
+    height: auto;
+    border: solid;
+    border-radius: 50%;
+    border-color: black;
+    /*filter:blur(0px);*/
+    filter:sepia(100%);
+    display: block;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.thumb-text {
+    width: 250px;
+    display: none;
+    position:absolute;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    line-height: 100%;
+    font-weight: bold;
+    font-family: Impact, Charcoal, sans-serif;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.thumb-container:hover p {
+  display: block;
+}
+
+.thumb-container:hover img {
+  border-radius: 25px;
+  filter:sepia(0%);
+  /*filter:blur(2px);*/
+}
