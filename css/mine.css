@@ -1,17 +1,45 @@
-hr.teams {
+@font-face {
+    font-family: Korean;
+    src: url('../fonts/Korean_Calligraphy.ttf');
+}
+
+@font-face {
+    font-family: Fighting;
+    src: url('../fonts/FightingSpirit.ttf');
+}
+@font-face {
+    font-family: Fighting;
+    src: url('../fonts/FightingSpiritBold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Fighting;
+    src: url('../fonts/FightingSpiritItalic.ttf');
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: MonaShark;
+    src: url('../fonts/MonaShark.otf');
+}
+
+hr {
     border: 0;
     height: 0; /* Firefox... */
     box-shadow: 0 0 10px 1px black;
     text-align: center;
 }
 
-hr.teams:after {
-    content: "Equipos";
+hr:after {
     display: inline-block;
     position: relative;
     top: -0.7em;
     font-size: 1.5em;
     padding: 0 0.25em;
+}
+
+hr.teams {
+    content: "Equipos";
 }
 
 .thumb-list {
@@ -62,11 +90,26 @@ ul.thumb-list li.thumb-list {
 }
 
 .thumb-container:hover p {
-  display: block;
+    display: block;
 }
 
 .thumb-container:hover img {
-  border-radius: 25px;
-  filter:sepia(0%);
-  /*filter:blur(2px);*/
+    border-radius: 25px;
+    filter:sepia(0%);
+    /*filter:blur(2px);*/
 }
+
+.team-table {
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    text-align: center;
+}
+
+.team-table th {
+    text-align: center;
+}
+
+/*.team-table th .team-table td {
+    text-align: center;
+}*/
