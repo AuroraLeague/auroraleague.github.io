@@ -13,6 +13,16 @@ layout: default
     <div class="inner">
       <section>
         <h4>Roster</h4>
+        {% for player in page.players %}
+        {% for game in site.data.games %}
+        {% for sub_player in game.blue.players %}
+        {% if sub_player.position == player.position %}
+        <p>{{ player.name }}</p>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+
         <table class="team-table">
           <thead>
             <tr>
@@ -32,10 +42,59 @@ layout: default
           </tbody>
         </table>
       </section>
+
       <hr/>
+
       <section>
         <h4>Partidos</h4>
-        <p>No hay partidos para mostrar</p>
+        <ul class="match-list">
+        {% for game in site.data.games %}
+          {% if game.blue.name == page.preface or game.red.name == page.preface %}
+            {% assign blue = (site.pages | where:"preface",game.blue.name | first) %}
+            {% assign red = (site.pages | where:"preface",game.red.name | first) %}
+            <li>
+              {% if game.blue.wins == game.red.wins %}
+              <div class="match-draw">
+              {% elsif game.blue.name == page.preface and game.blue.wins > game.red.wins %}
+              <div class="match-won">
+              {% elsif game.red.name == page.preface and game.red.wins > game.blue.wins %}
+              <div class="match-won">
+              {% else %}
+              <div class="match-lost">
+              {% endif %}
+                <table>
+                  <thead>
+                    <tr>
+                      <th><a href="{{ blue.url }}"><img src="{{ blue.logo }}" /></a></th>
+                      <th>{{ game.blue.wins }}</th>
+                      <th>{{ game.red.wins }}</th>
+                      <th><a href="{{ red.url }}"><img src="{{ red.logo }}" /></a></th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="match-champions">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        {% for player in game.blue.players %}
+                        <img src="../../images/champs/{{ player.champion }}.png"/>
+                        {% endfor %}
+                      </th>
+                      <th>
+                        {% for player in game.red.players %}
+                        <img src="../../images/champs/{{ player.champion }}.png"/>
+                        {% endfor %}
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
         <p>Puntos totales: {{ page.score }}</p>
       </section>
     </div>
