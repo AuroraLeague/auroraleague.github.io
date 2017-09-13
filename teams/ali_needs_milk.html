@@ -4,6 +4,22 @@ title: Ali Needs MILK
 preface: AMILK
 logo: ../../images/teams/ali_needs_milk.png
 score: 0
+players:
+  - position: Top
+    name: Mungaa
+    kda: 0
+  - position: Jungler
+    name: Pometa
+    kda: 0
+  - position: Mid
+    name: AlexSinIch
+    kda: 0
+  - position: ADC
+    name: Waken22
+    kda: 0
+  - position: Support
+    name: NodEtt
+    kda: 0
 ---
 			<section>
 				<h4>Roster</h4>
@@ -16,37 +32,21 @@ score: 0
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>Top</td>
-							<td>Mungaa</td>
-							<td>0.0</td>
-						</tr>
-						<tr>
-							<td>Jungler</td>
-							<td>Pometa</td>
-							<td>0.0</td>
-						</tr>
-						<tr>
-							<td>Mid</td>
-							<td>AlexSinIch</td>
-							<td>0.0</td>
-						</tr>
-						<tr>
-							<td>ADC</td>
-							<td>Waken22</td>
-							<td>0.0</td>
-						</tr>
-						<tr>
-							<td>Support</td>
-							<td>NodEtt</td>
-							<td>0.0</td>
-						</tr>
+						{% for player in page.players %}
+							<tr>
+								<td>{{ player.position }}</td>
+								<td>{{ player.name }}</td>
+								<td>{{ player.kda }}</td>
+							</tr>
+						{% endfor %}
 					</tbody>
 				</table>
 			</section>
+
 			<hr/>
+
 			<section>
 				<h4>Partidos</h4>
 				<p>No hay partidos para mostrar</p>
-				<p>Puntos totales: 0</p>
+				<p>Puntos totales: {{ page.score }}</p>
 			</section>
