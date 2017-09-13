@@ -2,15 +2,22 @@
 layout: page
 title: Roster
 preface: Equipos participantes
+teams:
+  - ../teams/ali_needs_milk.html
+  - ../teams/brutal_falcons.html
+  - ../teams/ignite.html
 ---
 			<section>
 				<h4>Roster</h4>
 				<p>Los rosters de equipos no estan cerrados</p>
 				<p>La inscripción sigue abierta. <a href="contact">Inscribite!</a></p>
 			</section>
+
 			<hr />
+
 			<section>
-				<h4>Clasificación</h4>
+				<p>Clasificación Sorted</p>
+				{% assign teams = (site.pages | where:"layout","team" | sort: 'score') %}
 				<table class="week-table">
 					<thead>
 						<tr>
@@ -19,136 +26,34 @@ preface: Equipos participantes
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-						 <td><a href="../../teams/brutal_falcons">
-								<img src="../images/teams/brutal_falcons.png"/>
-								<span>BF</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/wolfs_team">
-								<img src="../images/teams/wolfs_team.png"/>
-								<span>WOLFS</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/ali_needs_milk">
-								<img src="../images/teams/ali_needs_milk.png"/>
-								<span>AMILK</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/j2h_gaming">
-								<img src="../images/teams/j2h_gaming.png"/>
-								<span>J2H</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/tf_gaming">
-								<img src="../images/teams/tf_gaming.png"/>
-								<span>TFG</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/team_solo_rayo">
-								<img src="../images/teams/team_solo_rayo.png"/>
-								<span>TSR</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/ignite">
-								<img src="../images/teams/ignite.png"/>
-								<span>IGN</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-						<tr>
-							<td><a href="../../teams/equipo_sin_creatividad">
-								<img src="../images/teams/equipo_sin_creatividad.png"/>
-								<span>ESC</span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr>
-
-						<!-- New Teams -->
-						<!-- <tr>
-							<td><a href="../../teams/">
-								<img src="../images/teams/.png"/>
-								<span></span>
-							</a></td>
-							<td><p>0</p></td>
-						</tr> -->
+						{% for page in teams reversed %}
+							<tr>
+								<td><a href="{{ page.url }}">
+									<img src="{{ page.logo }}"/>
+									<span>{{ page.preface }}</span>
+								</a></td>
+								<td><p>{{ page.score }}</p></td>
+							</tr>
+						{% endfor %}
 					</tbody>
 				</table>
 			</section>
+
 			<hr />
+
 			<section>
 				<h4>Equipos</h4>
+				{% assign teams = (site.pages | where:"layout","team" | sort: 'title') %}
 				<div class="thumb-list">
 					<ul class="thumb-list">
-						<li class="thumb-list"><a href="../teams/brutal_falcons">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/brutal_falcons.png" />
-								<p class="thumb-text">Brutal Falcons</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/wolfs_team">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/wolfs_team.png" />
-								<p class="thumb-text">Wolfs Team</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/ali_needs_milk">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/ali_needs_milk.png" />
-								<p class="thumb-text">Ali Needs MILK</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/j2h_gaming">
-							<div class="thumb-container">
-								<!-- <img class="thumb-image" src="../images/teams/j2h_gaming.png" /> -->
-								<img class="thumb-image" src="http://placehold.it/150x150" />
-								<p class="thumb-text">J2H Gaming</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/tf_gaming">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/tf_gaming.png" />
-								<p class="thumb-text">TF Gaming</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/team_solo_rayo">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/team_solo_rayo.png" />
-								<p class="thumb-text">Team Solo Rayo</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/ignite">
-							<div class="thumb-container">
-								<img class="thumb-image" src="../images/teams/ignite.png" />
-								<p class="thumb-text">Ignite</p>
-							</div>
-						</a></li>
-						<li class="thumb-list"><a href="../teams/equipo_sin_creatividad">
-							<div class="thumb-container">
-								<img class="thumb-image" src="http://placehold.it/150x150" />
-								<p class="thumb-text">Equipo Sin Creatividad</p>
-							</div>
-						</a></li>
-
-						<!--  New Teams -->
-						<!-- <li class="thumb-list"><a href="../teams/">
-							<div class="thumb-container">
-								<img class="thumb-image" src="http://placehold.it/150x150" />
-								<p class="thumb-text">Team Test</p>
-							</div>
-						</a></li> -->
+						{% for page in teams reversed %}
+							<li class="thumb-list"><a href="{{ page.url }}">
+								<div class="thumb-container">
+									<img class="thumb-image" src="{{ page.logo }}" />
+									<p class="thumb-text">{{ page.title }}</p>
+								</div>
+							</a></li>
+						{% endfor %}
 					</ul>
 				</div>
 			</section>
