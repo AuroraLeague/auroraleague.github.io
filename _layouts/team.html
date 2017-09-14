@@ -13,16 +13,6 @@ layout: default
     <div class="inner">
       <section>
         <h4>Roster</h4>
-        {% for player in page.players %}
-        {% for game in site.data.games %}
-        {% for sub_player in game.blue.players %}
-        {% if sub_player.position == player.position %}
-        <p>{{ player.name }}</p>
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
-        {% endfor %}
-
         <table class="team-table">
           <thead>
             <tr>
@@ -36,7 +26,36 @@ layout: default
               <tr>
                 <td>{{ player.position }}</td>
                 <td>{{ player.name }}</td>
-                <td>{{ player.kda }}</td>
+                <td>
+                  {% assign kills = 0 %}
+                  {% assign deaths = 0 %}
+                  {% assign assists = 0 %}
+                  {% for game in site.data.games %}
+                  {% if game.team1.team == page.preface or game.team2.team == page.preface %}
+                  {% for match in game.matches %}
+                  {% for game_player in match.blue.players %}
+                  {% if player.name == game_player.name %}
+                  {% assign kills = kills | plus: game_player.kills %}
+                  {% assign deaths = deaths | plus: game_player.deaths %}
+                  {% assign assists = assists | plus: game_player.assists %}
+                  {% endif %}
+                  {% endfor %}
+                  {% for game_player in match.red.players %}
+                  {% if player.name == game_player.name %}
+                  {% assign kills = kills | plus: game_player.kills %}
+                  {% assign deaths = deaths | plus: game_player.deaths %}
+                  {% assign assists = assists | plus: game_player.assists %}
+                  {% endif %}
+                  {% endfor %}
+                  {% endfor %}
+                  {%endif %}
+                  {% endfor %}
+                  {% assign kda = kills | plus: assists %}
+                  {% assign deaths = deaths | times: 1.0 %}
+                  {% assign kda = kda | divided_by: deaths %}
+                  {% assign kda = kda | round: 2 %}
+                  {{ kda }}
+                </td>
               </tr>
             {% endfor %}
           </tbody>
@@ -47,53 +66,84 @@ layout: default
 
       <section>
         <h4>Partidos</h4>
-        <ul class="match-list">
-        {% for game in site.data.games %}
-          {% if game.blue.name == page.preface or game.red.name == page.preface %}
-            {% assign blue = (site.pages | where:"preface",game.blue.name | first) %}
-            {% assign red = (site.pages | where:"preface",game.red.name | first) %}
-            <li>
-              {% if game.blue.wins == game.red.wins %}
-              <div class="match-draw">
-              {% elsif game.blue.name == page.preface and game.blue.wins > game.red.wins %}
-              <div class="match-won">
-              {% elsif game.red.name == page.preface and game.red.wins > game.blue.wins %}
-              <div class="match-won">
-              {% else %}
-              <div class="match-lost">
-              {% endif %}
-                <table>
-                  <thead>
-                    <tr>
-                      <th><a href="{{ blue.url }}"><img src="{{ blue.logo }}" /></a></th>
-                      <th>{{ game.blue.wins }}</th>
-                      <th>{{ game.red.wins }}</th>
-                      <th><a href="{{ red.url }}"><img src="{{ red.logo }}" /></a></th>
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-              <div class="match-champions">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>
-                        {% for player in game.blue.players %}
-                        <img src="../../images/champs/{{ player.champion }}.png"/>
-                        {% endfor %}
-                      </th>
-                      <th>
-                        {% for player in game.red.players %}
-                        <img src="../../images/champs/{{ player.champion }}.png"/>
-                        {% endfor %}
-                      </th>
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-            </li>
+
+        <ul class="game-list">
+          {% for game in site.data.games %}
+          {% if game.team1.team == page.preface or game.team2.team == page.preface %}
+          {% assign team1 = (site.pages | where:"preface",game.team1.team | first) %}
+          {% assign team2 = (site.pages | where:"preface",game.team2.team | first) %}
+          <li>
+            {% if game.team1.wins == game.team2.wins %}
+            <div class="game-draw game">
+            {% elsif game.team1.team == page.preface and game.team1.wins > game.team2.wins %}
+            <div class="game-won game">
+            {% elsif game.team2.team == page.preface and game.team2.wins > game.team2.wins %}
+            <div class="game-won game">
+            {% else %}
+            <div class="game-lost game">
+            {% endif %}
+              <table>
+                <thead>
+                  <tr>
+                    <th><a href="{{ team1.url }}"><img class="game-image" src="{{ team1.logo }}" /></a></th>
+                    <th>{{ game.team1.wins }}</th>
+                    <th>{{ game.team2.wins }}</th>
+                    <th><a href="{{ team2.url }}"><img class="game-image" src="{{ team2.logo }}" /></a></th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="match">
+              <ul>
+                {% for match in game.matches %}
+                {% assign blue = (site.pages | where:"preface",match.blue.team | first) %}
+                {% assign red = (site.pages | where:"preface",match.red.team | first) %}
+                <li>
+                  <table>
+                    <tbody>
+                      <tr>
+                        {% if match.blue.wins > match.red.wins %}
+                        <td style="text-align:left; background-color: rgba(0, 255, 0, 0.3);">
+                        {% else %}
+                        <td style="text-align:left;">
+                        {% endif %}
+                          <img class="team-image" src="{{ blue.logo }}" style="text-align:left;"/>
+                        </td>
+                        {% if match.blue.wins > match.red.wins %}
+                        <td style="text-align:left; background-color: rgba(0, 255, 0, 0.3);">
+                        {% else %}
+                        <td style="text-align:left;">
+                        {% endif %}
+                          {% for player in match.blue.players %}
+                          <span><img class="champ-image" src="../../images/champs/{{ player.champion }}.png" title="{{ player.name }} - {{ player.champion | capitalize }} : {{ player.kills}}/{{ player.deaths}}/{{ player.assists}}"/></span>
+                          {% endfor %}
+                        </td>
+                        {% if match.red.wins > match.blue.wins %}
+                        <td style="text-align:right; background-color: rgba(0, 255, 0, 0.3);">
+                        {% else %}
+                        <td style="text-align:right;">
+                        {% endif %}
+                          {% for player in match.red.players %}
+                          <span><img class="champ-image" src="../../images/champs/{{ player.champion }}.png" title="{{ player.name }} - {{ player.champion | capitalize }} : {{ player.kills}}/{{ player.deaths}}/{{ player.assists}}"/></span>
+                          {% endfor %}
+                        </td>
+                        {% if match.red.wins > match.blue.wins %}
+                        <td style="text-align:right; background-color: rgba(0, 255, 0, 0.3);">
+                        {% else %}
+                        <td style="text-align:right;">
+                        {% endif %}
+                          <img class="team-image" src="{{ red.logo }}" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
           {% endif %}
-        {% endfor %}
+          {% endfor %}
         </ul>
         <p>Puntos totales: {{ page.score }}</p>
       </section>

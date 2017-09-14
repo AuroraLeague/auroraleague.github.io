@@ -1,70 +1,78 @@
-# Example game
-- id: 0
-  blue:
-    name: AMILK
-    wins: 2
-    players:
-      - position: top
-        name: Mungaa
-        champion: jayce
-        kills: 12
-        deaths: 3
-        assists: 4
-      - position: jungler
-        name: Pometa
-        champion: amumu
-        kills: 6
-        deaths: 1
-        assists: 16
-      - position: mid
-        name: AlexSinIch
-        champion: vladimir
-        kills: 13
-        deaths: 5
-        assists: 4
-      - position: adc
-        name: Waken22
-        champion: corki
-        kills: 8
-        deaths: 1
-        assists: 14
-      - position: support
-        name: NodEtt
-        champion: thresh
-        kills: 4
-        deaths: 5
-        assists: 18
-  red:
-    name: TFG
-    wins: 0
-    players:
-      - position: top
-        name: Godyr G2
-        champion: yorick
-        kills: 12
-        deaths: 3
-        assists: 4
-      - position: jungler
-        name: WTB HellLanD
-        champion: jax
-        kills: 6
-        deaths: 1
-        assists: 16
-      - position: mid
-        name: ascuos
-        champion: yasuo
-        kills: 13
-        deaths: 5
-        assists: 4
-      - position: adc
-        name: SKT Niwde
-        champion: mordekaiser
-        kills: 8
-        deaths: 1
-        assists: 14
-      - position: support
-        name: Im Zed Buddy
-        champion: janna
-        kills: 4
-        deaths: 5
-        assists: 18
+# Example game results for a Bo1 match
+# - game: -1
+#   team1:
+#     team: T01
+#     wins: 1
+#   team2:
+#     team: T02
+#     wins: 0
+#   matches:
+#   - match1:
+#     blue:
+#       team: T01
+#       wins : 1
+#       players:
+#         - position: top
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: jungler
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: mid
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: adc
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: support
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#     red:
+#       team: T02
+#       wins : 0
+#       players:
+#         - position: top
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: jungler
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: mid
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: adc
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
+#         - position: support
+#           name:
+#           champion:
+#           kills:
+#           deaths:
+#           assists:
