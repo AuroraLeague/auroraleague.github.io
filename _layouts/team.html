@@ -149,13 +149,13 @@ layout: default
         {% for game in site.data.games %}
         {% if game.team1.team == page.preface %}
         {% if game.team1.wins > game.team2.wins %}
-        {% assign points = points | plus: 2 %}
+        {% assign points = points | plus: 3 %}
         {% elsif game.team1.wins == game.team2.wins %}
         {% assign points = points | plus: 1 %}
         {% endif %}
         {% elsif game.team2.team == page.preface %}
         {% if game.team2.wins > game.team1.wins %}
-        {% assign points = points | plus: 2 %}
+        {% assign points = points | plus: 3 %}
         {% elsif game.team2.wins == game.team1.wins %}
         {% assign points = points | plus: 1 %}
         {% endif %}
