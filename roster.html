@@ -2,10 +2,9 @@
 layout: page
 title: Roster
 preface: Equipos participantes
-teams:
-  - ../teams/ali_needs_milk.html
-  - ../teams/brutal_falcons.html
-  - ../teams/ignite.html
+groups:
+  - A
+  - B
 ---
 			<section>
 				<h4>Roster</h4>
@@ -17,8 +16,10 @@ teams:
 
 			<section>
 				<p>Clasificación Sorted</p>
-				{% assign teams = (site.pages | where:"layout","team" | sort: 'score') %}
-				<table class="week-table">
+        {% for group in page.groups %}
+        <p>Group {{ group }}</p>
+        {% assign teams = (site.pages | where:"layout","team" | where:"group",group | sort: 'score') %}
+        <table class="week-table">
 					<thead>
 						<tr>
 							<th>Equipo</th>
@@ -37,6 +38,7 @@ teams:
 						{% endfor %}
 					</tbody>
 				</table>
+        {% endfor %}
 			</section>
 
 			<hr />
