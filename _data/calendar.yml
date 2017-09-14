@@ -1,0 +1,21 @@
+# Week example
+# - week: 1
+#   date: 18-09-2017 24-09-2017
+#   groups:
+#     - group: A
+#       matches:
+#         - 1:
+#           blue:
+#             team: T01
+#             wins: 0
+#           red:
+#             team: T02
+#             wins: 0
+#         - 2:
+#           blue:
+#             team: T03
+#             wins: 0
+#           red:
+#             team: T04
+#             wins: 0
+#     - group: B

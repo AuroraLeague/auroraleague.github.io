@@ -18,81 +18,26 @@ preface: Calendario de los partidos
 				<h4>Clasificación</h4>
 
 				<div class="tab">
-					<button class="tablinks" onclick="openWeek(event, 'Week1')" id="defaultOpen">Semana 1</button>
-					<button class="tablinks" onclick="openWeek(event, 'Week2')">Semana 2</button>
-					<button class="tablinks" onclick="openWeek(event, 'Week3')">Semana 3</button>
-					<button class="tablinks" onclick="openWeek(event, 'Week4')">Semana 4</button>
-					<button class="tablinks" onclick="openWeek(event, 'Week5')">Semana 5</button>
+				{% for week in site.data.calendar %}
+					{% if week.week == 1 %}
+					<button class="tablinks" onclick="openWeek(event, 'Week{{ week.week }}')" id="defaultOpen">Semana {{ week.week }}</button>
+					{% else %}
+					<button class="tablinks" onclick="openWeek(event, 'Week{{ week.week }}')">Semana {{ week.week }}</button>
+					{% endif %}
+				{% endfor %}
 				</div>
 
-				<div id="Week1" class="tabcontent">
-					<h5>18-09-2017 24-09-2017</h5>
+				{% for week in site.data.calendar %}
+				<div id="Week{{ week.week }}" class="tabcontent">
+					<h5>{{ week.date }}</h5>
 					<p>Todos los partidos se jugaran BO2</p>
 					<ul>
 						<li>Ganar ambos partidos: 3 puntos</li>
 						<li>Empatar: 1 punto para cada equipo</li>
 						<li>Perder ambos partidos: 0 puntos</li>
 					</ul>
-					<table class="week-table">
-						<thead>
-							<tr>
-								<th>Azul</th>
-								<th></th>
-								<th></th>
-								<th>Rojo</th>
-							</tr>
-						</thead>
-						<!-- Testing!!!!! MUST BE ERASED! -->
-						<!-- <tbody>
-							<tr>
-								<td><a href="teams/ali_needs_milk.html">
-									<img src="../images/teams/ali_needs_milk.JPG"/>
-									<span>AMILK</span>
-								</a></td>
-								<td><p>1</p></td>
-								<td><p>1</p></td>
-								<td><a href="teams/brutal_falcons.html">
-									<span>BF</span>
-									<img src="../images/teams/brutal_falcons.JPG"/>
-								</a></td>
-							</tr>
-							<tr>
-								<td><a href="teams/wolfs_team.html">
-									<img src="../images/teams/wolfs_team.JPG"/>
-									<span>WOLFS</span>
-								</a></td>
-								<td><p>2</p></td>
-								<td><p>0</p></td>
-								<td><a href="teams/planet_zoo.html">
-									<span>PTZG</span>
-									<img src="../images/teams/planet_zoo.JPG"/>
-								</a></td>
-							</tr> -->
-							<!-- New matches -->
-							<!-- <tr>
-								<td><a href="teams/.html">
-									<img src="../images/teams/.JPG"/>
-									<span></span>
-								</a></td>
-								<td><p>0</p></td>
-								<td><p>0</p></td>
-								<td><a href="teams/.html">
-									<span></span>
-									<img src="../images/teams/.JPG"/>
-								</a></td>
-							</tr> -->
-						</tbody>
-					</table>
-				</div>
-
-				<div id="Week2" class="tabcontent">
-					<h5>25-09-2017 01-10-2017</h5>
-					<p>Todos los partidos se jugaran BO2</p>
-					<ul>
-						<li>Ganar ambos partidos: 3 puntos</li>
-						<li>Empatar: 1 punto para cada equipo</li>
-						<li>Perder ambos partidos: 0 puntos</li>
-					</ul>
+					{% for group in week.groups %}
+					<h5>Group {{ group.group }}</h5>
 					<table class="week-table">
 						<thead>
 							<tr>
@@ -103,43 +48,50 @@ preface: Calendario de los partidos
 							</tr>
 						</thead>
 						<tbody>
-							<!-- New matches -->
-							<!-- <tr>
-								<td><a href="teams/.html">
-									<img src="../images/teams/.JPG"/>
-									<span></span>
+							{% for match in group.matches %}
+							{% assign blue = (site.pages | where:"preface",match.blue.team | first) %}
+							{% assign red = (site.pages | where:"preface",match.red.team | first) %}
+							<tr>
+								<td><a href="{{ blue.url }}">
+									<img src="{{ blue.logo }}" />
+									<span>{{ blue.preface }}</span>
 								</a></td>
-								<td><p>0</p></td>
-								<td><p>0</p></td>
-								<td><a href="teams/.html">
-									<span></span>
-									<img src="../images/teams/.JPG"/>
+								<td><p>{{ match.blue.wins }}</p></td>
+								<td><p>{{ match.red.wins }}</p></td>
+								<td><a href="{{ red.url }}">
+									<img src="{{ red.logo }}" />
+									<span>{{ blue.preface }}</span>
 								</a></td>
-							</tr> -->
+							</tr>
+							{% endfor %}
 						</tbody>
 					</table>
+					{% endfor %}
 				</div>
-
-				<script>
-					function openWeek(evt, weekName) {
-						var i, tabcontent, tablinks;
-						tabcontent = document.getElementsByClassName("tabcontent");
-						for (i = 0; i < tabcontent.length; i++) {
-							tabcontent[i].style.display = "none";
-						}
-						tablinks = document.getElementsByClassName("tablinks");
-						for (i = 0; i < tablinks.length; i++) {
-							tablinks[i].className = tablinks[i].className.replace(" active", "");
-						}
-						document.getElementById(weekName).style.display = "block";
-						evt.currentTarget.className += " active";
-					}
-
-					// Get the element with id="defaultOpen" and click on it
-					document.getElementById("defaultOpen").click();
-				</script>
+				{% endfor %}
 			</section>
+
 			<hr/>
+
 			<section>
 				<h4>Eliminatoria</h4>
 			</section>
+
+			<script>
+				function openWeek(evt, weekName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(weekName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
