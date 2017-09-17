@@ -36,6 +36,7 @@ preface: Calendario de los partidos
 						<li>Empatar: 1 punto para cada equipo</li>
 						<li>Perder ambos partidos: 0 puntos</li>
 					</ul>
+					<p>Despues de cada partido se cambian los lados</p>
 					{% for group in week.groups %}
 					<h5>Group {{ group.group }}</h5>
 					<table class="week-table">
@@ -60,7 +61,7 @@ preface: Calendario de los partidos
 								<td><p>{{ match.red.wins }}</p></td>
 								<td><a href="{{ red.url }}">
 									<img src="{{ red.logo }}" />
-									<span>{{ blue.preface }}</span>
+									<span>{{ red.preface }}</span>
 								</a></td>
 							</tr>
 							{% endfor %}
