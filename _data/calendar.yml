@@ -21,7 +21,7 @@
 #     - group: B
 
 - week: 1
-  date:
+  date: 18-09-2017 - 24-09-2017
   groups:
     - group: A
       matches:
@@ -78,7 +78,7 @@
             wins: 0
 
 - week: 2
-  date:
+  date: 25-09-2017 - 01-10-2017
   groups:
     - group: A
       matches:
@@ -135,7 +135,7 @@
             wins: 0
 
 - week: 3
-  date:
+  date: 02-10-2017 - 08-10-2017
   groups:
     - group: A
       matches:
@@ -192,7 +192,7 @@
             wins: 0
 
 - week: 4
-  date:
+  date: 09-10-2017 - 15-10-2017
   groups:
     - group: A
       matches:
@@ -249,7 +249,7 @@
             wins: 0
 
 - week: 5
-  date:
+  date: 16-10-2017 - 22-10-2017
   groups:
     - group: A
       matches:
@@ -306,7 +306,7 @@
             wins: 0
 
 - week: 6
-  date:
+  date: 23-10-2017 - 29-10-2017
   groups:
     - group: A
       matches:
@@ -340,7 +340,7 @@
             wins: 0
 
 - week: 7
-  date:
+  date: 30-10-2017 - 05-11-2017
   groups:
     - group: A
       matches:
