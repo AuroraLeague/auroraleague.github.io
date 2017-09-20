@@ -76,3 +76,150 @@
 #           kills:
 #           deaths:
 #           assists:
+
+- game: 1
+  team1:
+    team: IGN
+    wins: 0
+  team2:
+    team: TSR
+    wins: 2
+  matches:
+  - match1:
+    blue:
+      team: IGN
+      wins: 1
+      players:
+        - position: top
+          name: torukraptor
+          champion: renekton
+          kills: 4
+          deaths: 5
+          assists: 12
+        - position: jungler
+          name: 3xta6 jäguer
+          champion: ezreal
+          kills: 7
+          deaths: 10
+          assists: 12
+        - position: mid
+          name: hedghard
+          champion: lux
+          kills: 9
+          deaths: 4
+          assists: 10
+        - position: adc
+          name: shurnormal
+          champion: ashe
+          kills: 5
+          deaths: 2
+          assists: 14
+        - position: support
+          name: yolo darth vader
+          champion: rakkan
+          kills: 3
+          deaths: 4
+          assists: 20
+    red:
+      team: TSR
+      wins: 0
+      players:
+        - position: top
+          name: Lynxiing
+          champion: irelia
+          kills: 7
+          deaths: 8
+          assists: 8
+        - position: jungler
+          name: pativa
+          champion: leesin
+          kills: 5
+          deaths: 6
+          assists: 11
+        - position: mid
+          name: LDaniel11
+          champion: syndra
+          kills: 6
+          deaths: 6
+          assists: 6
+        - position: adc
+          name: nxsgdlt9
+          champion: xayah
+          kills: 7
+          deaths: 3
+          assists: 5
+        - position: support
+          name: TSR RowStrike
+          champion: karma
+          kills: 0
+          deaths: 5
+          assists: 9
+  - match2:
+    blue:
+      team: TSR
+      wins: 1
+      players:
+        - position: top
+          name: Lynxiing
+          champion: jayce
+          kills: 12
+          deaths: 7
+          assists: 2
+        - position: jungler
+          name: pativa
+          champion: kayn
+          kills: 3
+          deaths: 4
+          assists: 6
+        - position: mid
+          name: LDaniel11
+          champion: orianna
+          kills: 4
+          deaths: 4
+          assists: 7
+        - position: adc
+          name: nxsgdlt9
+          champion: ezreal
+          kills: 6
+          deaths: 3
+          assists: 7
+        - position: support
+          name: TSR RowStrike
+          champion: morgana
+          kills: 0
+          deaths: 5
+          assists: 7
+    red:
+      team: IGN
+      wins: 0
+      players:
+        - position: top
+          name: torukraptor
+          champion: wukong
+          kills: 2
+          deaths: 6
+          assists: 8
+        - position: jungler
+          name: 3xta6 jäguer
+          champion: jarvaniv
+          kills: 4
+          deaths: 5
+          assists: 15
+        - position: mid
+          name: hedghard
+          champion: ziggs
+          kills: 6
+          deaths: 5
+          assists: 8
+        - position: adc
+          name: shurnormal
+          champion: missfortune
+          kills: 6
+          deaths: 6
+          assists: 8
+        - position: support
+          name: yolo darth vader
+          champion: alistar
+          kills: 5
+          deaths: 3
+          assists: 9
