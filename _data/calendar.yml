@@ -32,21 +32,14 @@
           red:
             team: TFG
             wins: 0
-        - 2:
+        - 1:
           blue:
             team: EL
             wins: 0
           red:
             team: AMILK
             wins: 0
-        - 3:
-          blue:
-            team: BF
-            wins: 0
-          red:
-            team: 0
-            wins: 0
-        - 4:
+        - 1:
           blue:
             team: ESC
             wins: 0
@@ -62,14 +55,14 @@
           red:
             team: TSR
             wins: 2
-        - 2:
+        - 1:
           blue:
-            team: EVORG
+            team: BF
             wins: 0
           red:
             team: REAL LIFE
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: RAMS
             wins: 0
@@ -89,26 +82,19 @@
           red:
             team: AMILK
             wins: 0
-        - 2:
+        - 1:
           blue:
             team: EL
             wins: 0
           red:
-            team: BP
-            wins: 0
-        - 3:
-          blue:
-            team: BF
-            wins: 0
-          red:
             team: ESC
             wins: 0
-        - 4:
+        - 1:
           blue:
             team: TFG
             wins: 0
           red:
-            team: 0
+            team: BP
             wins: 0
     - group: B
       matches:
@@ -119,14 +105,14 @@
           red:
             team: REAL LIFE
             wins: 0
-        - 2:
+        - 1:
           blue:
-            team: EVORG
+            team: BF
             wins: 0
           red:
             team: RAMS
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: TSR
             wins: 0
@@ -144,28 +130,21 @@
             team: TY
             wins: 0
           red:
-            team: 0
+            team: BP
             wins: 0
-        - 2:
-          blue:
-            team: EL
-            wins: 0
-          red:
-            team: BF
-            wins: 0
-        - 3:
+        - 1:
           blue:
             team: TFG
             wins: 0
           red:
-            team: ESC
+            team: EL
             wins: 0
-        - 4:
+        - 1:
           blue:
             team: AMILK
             wins: 0
           red:
-            team: BP
+            team: ESC
             wins: 0
     - group: B
       matches:
@@ -176,14 +155,14 @@
           red:
             team: WOLFS
             wins: 0
-        - 2:
+        - 1:
           blue:
             team: TSR
             wins: 0
           red:
-            team: EVORG
+            team: BF
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: REAL LIFE
             wins: 0
@@ -201,28 +180,21 @@
             team: TY
             wins: 0
           red:
-            team: BP
+            team: ESC
             wins: 0
-        - 2:
+        - 1:
           blue:
-            team: TFG
+            team: BP
             wins: 0
           red:
             team: EL
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: AMILK
             wins: 0
           red:
-            team: BF
-            wins: 0
-        - 4:
-          blue:
-            team: 0
-            wins: 0
-          red:
-            team: ESC
+            team: TFG
             wins: 0
     - group: B
       matches:
@@ -233,14 +205,14 @@
           red:
             team: RAMS
             wins: 0
-        - 2:
+        - 1:
           blue:
             team: WOLFS
             wins: 0
           red:
-            team: EVORG
+            team: BF
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: REAL LIFE
             wins: 0
@@ -258,28 +230,21 @@
             team: TY
             wins: 0
           red:
-            team: ESC
-            wins: 0
-        - 2:
-          blue:
-            team: 0
-            wins: 0
-          red:
             team: EL
             wins: 0
-        - 3:
+        - 1:
+          blue:
+            team: ESC
+            wins: 0
+          red:
+            team: TFG
+            wins: 0
+        - 1:
           blue:
             team: BP
             wins: 0
           red:
-            team: BF
-            wins: 0
-        - 4:
-          blue:
             team: AMILK
-            wins: 0
-          red:
-            team: TFG
             wins: 0
     - group: B
       matches:
@@ -288,87 +253,19 @@
             team: IGN
             wins: 0
           red:
-            team: EVORG
+            team: BF
             wins: 0
-        - 2:
+        - 1:
           blue:
             team: RAMS
             wins: 0
           red:
             team: TSR
             wins: 0
-        - 3:
+        - 1:
           blue:
             team: WOLFS
             wins: 0
           red:
             team: REAL LIFE
-            wins: 0
-
-- week: 6
-  date: 23-10-2017 - 29-10-2017
-  groups:
-    - group: A
-      matches:
-        - 1:
-          blue:
-            team: TY
-            wins: 0
-          red:
-            team: BF
-            wins: 0
-        - 2:
-          blue:
-            team: ESC
-            wins: 0
-          red:
-            team: EL
-            wins: 0
-        - 3:
-          blue:
-            team: BP
-            wins: 0
-          red:
-            team: TFG
-            wins: 0
-        - 4:
-          blue:
-            team: 0
-            wins: 0
-          red:
-            team: AMILK
-            wins: 0
-
-- week: 7
-  date: 30-10-2017 - 05-11-2017
-  groups:
-    - group: A
-      matches:
-        - 1:
-          blue:
-            team: TY
-            wins: 0
-          red:
-            team: EL
-            wins: 0
-        - 2:
-          blue:
-            team: BF
-            wins: 0
-          red:
-            team: TFG
-            wins: 0
-        - 3:
-          blue:
-            team: ESC
-            wins: 0
-          red:
-            team: AMILK
-            wins: 0
-        - 4:
-          blue:
-            team: BP
-            wins: 0
-          red:
-            team: 0
             wins: 0
