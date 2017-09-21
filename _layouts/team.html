@@ -27,32 +27,49 @@ layout: default
                 <td>{{ player.position }}</td>
                 <td>{{ player.name }}</td>
                 <td>
-                  {% assign kills = 0 %}
-                  {% assign deaths = 0 %}
-                  {% assign assists = 0 %}
+                  {% assign kda = 0 %}
                   {% for game in site.data.games %}
-                  {% if game.team1.team == page.preface or game.team2.team == page.preface %}
                   {% for match in game.matches %}
                   {% for game_player in match.blue.players %}
                   {% if player.name == game_player.name %}
-                  {% assign kills = kills | plus: game_player.kills %}
-                  {% assign deaths = deaths | plus: game_player.deaths %}
-                  {% assign assists = assists | plus: game_player.assists %}
+                  {% assign matchkda = 0 %}
+                  {% assign matchkda = game_player.kills | plus: game_player.assists %}
+                  {% assign deaths = game_player.deaths %}
+                  {% if deaths == 0 %}
+                  {% assign matchkda = matchkda | times: 2.0 %}
+                  {% else %}
+                  {% assign deaths = deaths | times: 1.0 %}
+                  {% assign matchkda = matchkda | divided_by: deaths %}
+                  {% endif %}
+                  {% if kda == 0 %}
+                  {% assign kda = matchkda %}
+                  {% else %}
+                  {% assign kda = kda | plus: matchkda %}
+                  {% assign kda = kda | divided_by: 2.0 %}
+                  {% endif %}
                   {% endif %}
                   {% endfor %}
                   {% for game_player in match.red.players %}
                   {% if player.name == game_player.name %}
-                  {% assign kills = kills | plus: game_player.kills %}
-                  {% assign deaths = deaths | plus: game_player.deaths %}
-                  {% assign assists = assists | plus: game_player.assists %}
+                  {% assign matchkda = 0 %}
+                  {% assign matchkda = game_player.kills | plus: game_player.assists %}
+                  {% assign deaths = game_player.deaths %}
+                  {% if deaths == 0 %}
+                  {% assign matchkda = matchkda | times: 2.0 %}
+                  {% else %}
+                  {% assign deaths = deaths | times: 1.0 %}
+                  {% assign matchkda = matchkda | divided_by: deaths %}
+                  {% endif %}
+                  {% if kda == 0 %}
+                  {% assign kda = matchkda %}
+                  {% else %}
+                  {% assign kda = kda | plus: matchkda %}
+                  {% assign kda = kda | divided_by: 2.0 %}
+                  {% endif %}
                   {% endif %}
                   {% endfor %}
                   {% endfor %}
-                  {%endif %}
                   {% endfor %}
-                  {% assign kda = kills | plus: assists %}
-                  {% assign deaths = deaths | times: 1.0 %}
-                  {% assign kda = kda | divided_by: deaths %}
                   {% assign kda = kda | round: 2 %}
                   {{ kda }}
                 </td>
@@ -77,7 +94,7 @@ layout: default
             <div class="game-draw game">
             {% elsif game.team1.team == page.preface and game.team1.wins > game.team2.wins %}
             <div class="game-won game">
-            {% elsif game.team2.team == page.preface and game.team2.wins > game.team2.wins %}
+            {% elsif game.team2.team == page.preface and game.team2.wins > game.team1.wins %}
             <div class="game-won game">
             {% else %}
             <div class="game-lost game">
