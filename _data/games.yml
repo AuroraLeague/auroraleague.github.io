@@ -304,7 +304,7 @@
   - match2:
     blue:
       team: SWF
-      wins:
+      wins: 1
       players:
         - position: top
           name: AM Elfeydd
@@ -338,7 +338,7 @@
           assists: 9
     red:
       team: RAMS
-      wins:
+      wins: 0
       players:
         - position: top
           name: Rams Preslock
