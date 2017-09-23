@@ -88,7 +88,7 @@
   - match1:
     blue:
       team: IGN
-      wins: 0
+      wins: 1
       players:
         - position: top
           name: torukraptor
@@ -116,13 +116,13 @@
           assists: 14
         - position: support
           name: yolo darth vader
-          champion: rakan
+          champion: rakkan
           kills: 3
           deaths: 4
           assists: 20
     red:
       team: TSR
-      wins: 1
+      wins: 0
       players:
         - position: top
           name: Lynxiing
@@ -223,3 +223,150 @@
           kills: 5
           deaths: 3
           assists: 9
+
+- game: 2
+  team1:
+    team: RAMS
+    wins: 0
+  teams2:
+    team: SWF
+    wins: 0
+  matches:
+  - match1:
+    blue:
+      team: RAMS
+      wins: 1
+      players:
+        - position: top
+          name: Rams Preslock
+          champion: camille
+          kills: 5
+          deaths: 6
+          assists: 11
+        - position: jungler
+          name: Rams Avell
+          champion: gragas
+          kills: 6
+          deaths: 4
+          assists: 17
+        - position: mid
+          name: Rams YIIIS
+          champion: galio
+          kills: 9
+          deaths: 1
+          assists: 16
+        - position: adc
+          name: Rams MeepsOfBard
+          champion: xayah
+          kills: 13
+          deaths: 3
+          assists: 10
+        - position: support
+          name: xKoala14
+          champion: rakan
+          kills: 1
+          deaths: 7
+          assists: 24
+    red:
+      team: SWF
+      wins: 0
+      players:
+        - position: top
+          name: AM Elfeydd
+          champion: chogath
+          kills: 6
+          deaths: 5
+          assists: 5
+        - position: jungler
+          name: Yackas
+          champion: sejuani
+          kills: 3
+          deaths: 8
+          assists: 12
+        - position: mid
+          name: Sir wednesday
+          champion: orianna
+          kills: 4
+          deaths: 8
+          assists: 7
+        - position: adc
+          name: AM Kuppa
+          champion: kogmaw
+          kills: 8
+          deaths: 5
+          assists: 7
+        - position: support
+          name: marceio47
+          champion: braum
+          kills: 0
+          deaths: 8
+          assists: 16
+  - match2:
+    blue:
+      team: SWF
+      wins:
+      players:
+        - position: top
+          name: AM Elfeydd
+          champion: poppy
+          kills: 0
+          deaths: 3
+          assists: 11
+        - position: jungler
+          name: Yackas
+          champion: kayn
+          kills: 13
+          deaths: 4
+          assists: 6
+        - position: mid
+          name: Sir wednesday
+          champion: galio
+          kills: 2
+          deaths: 2
+          assists: 7
+        - position: adc
+          name: AM Kuppa
+          champion: tristana
+          kills: 8
+          deaths: 2
+          assists: 1
+        - position: support
+          name: marceio47
+          champion: lulu
+          kills: 0
+          deaths: 4
+          assists: 9
+    red:
+      team: RAMS
+      wins:
+      players:
+        - position: top
+          name: Rams Preslock
+          champion: rumble
+          kills: 3
+          deaths: 7
+          assists: 1
+        - position: jungler
+          name: Rams Avell
+          champion: jarvaniv
+          kills: 6
+          deaths: 5
+          assists: 6
+        - position: mid
+          name: Rams YIIIS
+          champion: cassiopeia
+          kills: 1
+          deaths: 4
+          assists: 6
+        - position: adc
+          name: Rams MeepsOfBard
+          champion: jhin
+          kills: 4
+          deaths: 3
+          assists: 8
+        - position: support
+          name: xKoala14
+          champion: shen
+          kills: 1
+          deaths: 4
+          assists: 7
