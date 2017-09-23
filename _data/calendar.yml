@@ -35,10 +35,10 @@
         - 1:
           blue:
             team: EL
-            wins: 0
+            wins: 1
           red:
             team: AMILK
-            wins: 0
+            wins: 1
         - 1:
           blue:
             team: ESC
