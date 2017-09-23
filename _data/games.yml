@@ -228,7 +228,7 @@
   team1:
     team: RAMS
     wins: 1
-  teams2:
+  team2:
     team: SWF
     wins: 1
   matches:
