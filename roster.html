@@ -5,6 +5,12 @@ preface: Equipos participantes
 groups:
   - A
   - B
+positions:
+  - Top
+  - Jungler
+  - Mid
+  - ADC
+  - Support
 ---
 			<!-- <section>
 				<h4>Roster</h4>
@@ -15,7 +21,7 @@ groups:
 			<hr /> -->
 
 			<section>
-				<p>Clasificación</p>
+				<h4>Clasificación</h4>
         {% for group in page.groups %}
         <p>Group {{ group }}</p>
         {% assign teams = (site.pages | where:"layout","team" | where:"group",group | sort: 'score') %}
@@ -42,6 +48,98 @@ groups:
 			</section>
 
 			<hr />
+
+      <section>
+        <h4>Mejores jugadores</h4>
+        {% assign teams = (site.pages | where:"layout","team") %}
+        <table class="week-table">
+          <thead>
+            <tr>
+              <th>Equipo</th>
+              <th>Posicion</th>
+              <th>Nombre</th>
+              <th>KDA</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for position in page.positions %}
+            {% assign player_name = "None" %}
+            {% assign player_kda = 0 %}
+            {% assign player_team = "None" %}
+            {% assign player_url = "None" %}
+            {% assign player_logo = "None" %}
+            {% for team in teams %}
+              {% for player in team.players %}
+                {% if player.position == position %}
+                  {% assign kda = 0 %}
+                  {% for game in site.data.games %}
+                    {% for match in game.matches %}
+                      {% for game_player in match.blue.players %}
+                        {% if player.name == game_player.name %}
+                          {% assign matchkda = 0 %}
+                          {% assign matchkda = game_player.kills | plus: game_player.assists %}
+                          {% assign deaths = game_player.deaths %}
+                          {% if deaths == 0 %}
+                            {% assign matchkda = matchkda | times: 2.0 %}
+                          {% else %}
+                            {% assign deaths = deaths | times: 1.0 %}
+                            {% assign matchkda = matchkda | divided_by: deaths %}
+                          {% endif %}
+                          {% if kda == 0 %}
+                            {% assign kda = matchkda %}
+                          {% else %}
+                            {% assign kda = kda | plus: matchkda %}
+                            {% assign kda = kda | divided_by: 2.0 %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                      {% for game_player in match.red.players %}
+                        {% if player.name == game_player.name %}
+                          {% assign matchkda = 0 %}
+                          {% assign matchkda = game_player.kills | plus: game_player.assists %}
+                          {% assign deaths = game_player.deaths %}
+                          {% if deaths == 0 %}
+                            {% assign matchkda = matchkda | times: 2.0 %}
+                          {% else %}
+                            {% assign deaths = deaths | times: 1.0 %}
+                            {% assign matchkda = matchkda | divided_by: deaths %}
+                          {% endif %}
+                          {% if kda == 0 %}
+                            {% assign kda = matchkda %}
+                          {% else %}
+                            {% assign kda = kda | plus: matchkda %}
+                            {% assign kda = kda | divided_by: 2.0 %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                  {% endfor %}
+                  {% if kda > player_kda %}
+                    {% assign player_name = player.name %}
+                    {% assign player_kda = kda %}
+                    {% assign player_team = team.preface %}
+                    {% assign player_url = team.url %}
+                    {% assign player_logo = team.logo %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+            {% assign player_kda = player_kda | round: 2 %}
+            <tr>
+              <td><a href="{{ player_team }}">
+                <img src="{{ player_logo }}"/>
+                <span>{{ player_team }}</span>
+              </a></td>
+              <td>{{ position }}</td>
+              <td>{{ player_name }}</td>
+              <td>{{player_kda }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+
+      <hr />
 
 			<section>
 				<h4>Equipos</h4>
