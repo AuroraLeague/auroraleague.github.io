@@ -19,7 +19,7 @@ preface: Calendario de los partidos
 
 				<div class="tab">
 				{% for week in site.data.calendar %}
-					{% if week.week == 1 %}
+					{% if week.actual == 1 %}
 					<button class="tablinks" onclick="openWeek(event, 'Week{{ week.week }}')" id="defaultOpen">Semana {{ week.week }}</button>
 					{% else %}
 					<button class="tablinks" onclick="openWeek(event, 'Week{{ week.week }}')">Semana {{ week.week }}</button>
