@@ -595,11 +595,3 @@
           kills: 0
           deaths: 4
           assists: 3
-    
-- game: 4
-  team1:
-    team: TY
-    wins: 0
-  team2:
-    team: TFG
-    wins: 2

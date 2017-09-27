@@ -29,11 +29,11 @@
       matches:
         - 1:
           blue:
-            team: TY
-            wins: 0
+            team: 0000
+            wins: "-"
           red:
             team: TFG
-            wins: 2
+            wins: "-"
         - 1:
           blue:
             team: EL
@@ -80,11 +80,11 @@
       matches:
         - 1:
           blue:
-            team: TY
-            wins: 0
+            team: 0000
+            wins: "-"
           red:
             team: AMILK
-            wins: 0
+            wins: "-"
         - 1:
           blue:
             team: EL
@@ -131,11 +131,11 @@
       matches:
         - 1:
           blue:
-            team: TY
-            wins: 0
+            team: 0000
+            wins: "-"
           red:
             team: BP
-            wins: 0
+            wins: "-"
         - 1:
           blue:
             team: TFG
@@ -182,11 +182,11 @@
       matches:
         - 1:
           blue:
-            team: TY
-            wins: 0
+            team: 0000
+            wins: "-"
           red:
             team: ESC
-            wins: 0
+            wins: "-"
         - 1:
           blue:
             team: BP
@@ -233,11 +233,11 @@
       matches:
         - 1:
           blue:
-            team: TY
-            wins: 0
+            team: 0000
+            wins: "-"
           red:
             team: EL
-            wins: 0
+            wins: "-"
         - 1:
           blue:
             team: ESC
