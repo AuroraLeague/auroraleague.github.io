@@ -88,7 +88,7 @@
   - match1:
     blue:
       team: IGN
-      wins: 1
+      wins: 0
       players:
         - position: top
           name: torukraptor
@@ -122,7 +122,7 @@
           assists: 20
     red:
       team: TSR
-      wins: 0
+      wins: 1
       players:
         - position: top
           name: Lynxiing
