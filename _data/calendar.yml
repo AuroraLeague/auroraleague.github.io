@@ -121,7 +121,7 @@
             wins: 0
           red:
             team: SWF
-            wins: 0
+            wins: 2
 
 - week: 3
   actual: 0
