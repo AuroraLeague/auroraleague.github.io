@@ -894,4 +894,151 @@
           kills: 0
           deaths: 9
           assists: 6
-      
+
+- game: 7
+  team1:
+    team: TSR
+    wins: 0
+  team2:
+    team: SWF
+    wins: 2
+  matches:
+  - match1:
+    blue:
+      team: TSR
+      wins: 0
+      players:
+        - position: top
+          name: Lynxiing
+          champion: irelia
+          kills: 13
+          deaths: 6
+          assists: 9
+        - position: jungler
+          name: pativa
+          champion: jarvaniv
+          kills: 6
+          deaths: 6
+          assists: 23
+        - position: mid
+          name: LDaniel11
+          champion: syndra
+          kills: 5
+          deaths: 9
+          assists: 6
+        - position: adc
+          name: nxsgdlt9
+          champion: sivir
+          kills: 9
+          deaths: 7
+          assists: 11
+        - position: support
+          name: TSR RowStrike
+          champion: thresh
+          kills: 1
+          deaths: 8
+          assists: 14
+    red:
+      team: SWF
+      wins: 1
+      players:
+        - position: top
+          name: Yackas
+          champion: fiora
+          kills: 12
+          deaths: 13
+          assists: 10
+        - position: jungler
+          name: AM Elfeydd
+          champion: maokai
+          kills: 8
+          deaths: 3
+          assists: 20
+        - position: mid
+          name: xXOvertimeXx
+          champion: cassiopeia
+          kills: 9
+          deaths: 6
+          assists: 13
+        - position: adc
+          name: AM Kuppa
+          champion: xayah
+          kills: 6
+          deaths: 8
+          assists: 13
+        - position: support
+          name: marceio47
+          champion: alistar
+          kills: 1
+          deaths: 4
+          assists: 22
+  - match2:
+    blue:
+      team: TSR
+      wins: 0
+      players:
+        - position: top
+          name: Lynxiing
+          champion: singed
+          kills: 6
+          deaths: 8
+          assists: 5
+        - position: jungler
+          name: pativa
+          champion: jarvaniv
+          kills: 4
+          deaths: 8
+          assists: 7
+        - position: mid
+          name: LDaniel11
+          champion: syndra
+          kills: 4
+          deaths: 5
+          assists: 2
+        - position: adc
+          name: nxsgdlt9
+          champion: xayah
+          kills: 5
+          deaths: 4
+          assists: 5
+        - position: support
+          name: TSR RowStrike
+          champion: alistar
+          kills: 0
+          deaths: 4
+          assists: 10
+    red:
+      team: SWF
+      wins: 1
+      players:
+        - position: top
+          name: AM Elfeydd
+          champion: galio
+          kills: 6
+          deaths: 4
+          assists: 16
+        - position: jungler
+          name: Yackas
+          champion: kayn
+          kills: 6
+          deaths: 8
+          assists: 14
+        - position: mid
+          name: xXOvertimeXx
+          champion: orianna
+          kills: 4
+          deaths: 3
+          assists: 11
+        - position: adc
+          name: AM Kuppa
+          champion: tristana
+          kills: 7
+          deaths: 2
+          assists: 4
+        - position: support
+          name: marceio47
+          champion: rakan
+          kills: 4
+          deaths: 3
+          assists: 9
+        
