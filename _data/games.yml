@@ -78,6 +78,7 @@
 #           assists:
 
 - game: 1
+  scores: 1
   team1:
     team: IGN
     wins: 0
@@ -225,6 +226,7 @@
           assists: 9
 
 - game: 2
+  scores: 1
   team1:
     team: RAMS
     wins: 1
@@ -372,6 +374,7 @@
           assists: 7
 
 - game: 3
+  scores: 1
   team1:
     team: EL
     wins: 1
@@ -450,6 +453,7 @@
           assists: 5
 
 - game: 4
+  scores: 1
   team1:
     team: BP
     wins: 0
@@ -597,6 +601,7 @@
           assists: 3
 
 - game: 5
+  scores: 1
   team1:
     team: BF
     wins: 0
@@ -742,3 +747,151 @@
           kills: 2
           deaths: 4
           assists: 10
+
+- game: 6
+  team1:
+    team: TFG
+    wins: 2
+  team2:
+    team: BP
+    wins: 0
+  matches:
+  - match1:
+    blue:
+      team: BP
+      wins: 0
+      players:
+        - position: top
+          name: Complexpit1516YT
+          champion: maokai
+          kills: 1
+          deaths: 2
+          assists: 5
+        - position: jungler
+          name: FNC WhiteCleaver
+          champion: kayn
+          kills: 6
+          deaths: 7
+          assists: 5
+        - position: mid
+          name: LydeOreon
+          champion: orianna
+          kills: 4
+          deaths: 8
+          assists: 4
+        - position: adc
+          name: Jacky senpai
+          champion: sivir
+          kills: 1
+          deaths: 5
+          assists: 3
+        - position: support
+          name: D49 HoNaVP
+          champion: morgana
+          kills: 1
+          deaths: 6
+          assists: 4
+    red:
+      team: TFG
+      wins: 1
+      players:
+        - position: top
+          name: Godyr G2
+          champion: darius
+          kills: 4
+          deaths: 5
+          assists: 3
+        - position: jungler
+          name: WTB HellLanD
+          champion: jax
+          kills: 1
+          deaths: 2
+          assists: 3
+        - position: mid
+          name: matheuserono
+          champion: velkoz
+          kills: 11
+          deaths: 1
+          assists: 4
+        - position: adc
+          name: ascuos
+          champion: xayah
+          kills: 8
+          deaths: 4
+          assists: 12
+        - position: support
+          name: Im Zed Buddy
+          champion: janna
+          kills: 4
+          deaths: 1
+          assists: 13
+  - match2:
+    blue:
+      team: TFG
+      wins: 1
+      players:
+        - position: top
+          name: Godyr G2
+          champion: riven
+          kills: 17
+          deaths: 5
+          assists: 3
+        - position: jungler
+          name: WTB HellLanD
+          champion: amumu
+          kills: 7
+          deaths: 2
+          assists: 14
+        - position: mid
+          name: matheuserono
+          champion: kennen
+          kills: 10
+          deaths: 7
+          assists: 7
+        - position: adc
+          name: ascuos
+          champion: lucian
+          kills: 4
+          deaths: 6
+          assists: 12
+        - position: support
+          name: Im Zed Buddy
+          champion: ivern
+          kills: 4
+          deaths: 3
+          assists: 21
+    red:
+      team: BP
+      wins: 0
+      players:
+        - position: top
+          name: Complexpit1516YT
+          champion: darius
+          kills: 3
+          deaths: 11
+          assists: 2
+        - position: jungler
+          name: FNC WhiteCleaver
+          champion: kayn
+          kills: 4
+          deaths: 6
+          assists: 5
+        - position: mid
+          name: LydeOreon
+          champion: akali
+          kills: 12
+          deaths: 9
+          assists: 4
+        - position: adc
+          name: Pan Tsuki
+          champion: varus
+          kills: 4
+          deaths: 7
+          assists: 8
+        - position: support
+          name: D49 HoNaVP
+          champion: janna
+          kills: 0
+          deaths: 9
+          assists: 6
+      
