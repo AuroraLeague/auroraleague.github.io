@@ -73,7 +73,7 @@
             wins: 1
 
 - week: 2
-  actual: 1
+  actual: 0
   date: 25-09-2017 - 01-10-2017
   groups:
     - group: A
@@ -114,7 +114,7 @@
             wins: 0
           red:
             team: RAMS
-            wins: 0
+            wins: 2
         - 1:
           blue:
             team: TSR
@@ -124,7 +124,7 @@
             wins: 2
 
 - week: 3
-  actual: 0
+  actual: 1
   date: 02-10-2017 - 08-10-2017
   groups:
     - group: A

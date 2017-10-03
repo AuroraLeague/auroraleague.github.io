@@ -749,6 +749,7 @@
           assists: 10
 
 - game: 6
+  scores: 1
   team1:
     team: TFG
     wins: 2
@@ -896,6 +897,7 @@
           assists: 6
 
 - game: 7
+  scores: 1
   team1:
     team: TSR
     wins: 0
@@ -1041,4 +1043,151 @@
           kills: 4
           deaths: 3
           assists: 9
-        
+
+- game: 8
+  scores: 1
+  team1:
+    team: BF
+    wins: 0
+  team2:
+    team: RAMS
+    wins: 2
+  matches:
+  - match1:
+    blue:
+      team: BF
+      wins: 0
+      players:
+         - position: top
+           name: gabogabo97
+           champion: maokai
+           kills: 1
+           deaths: 2
+           assists: 2
+         - position: jungler
+           name: BFALC BryanJose
+           champion: gragas
+           kills: 1
+           deaths: 3
+           assists: 3
+         - position: mid
+           name: FocusMyclon
+           champion: syndra
+           kills: 2
+           deaths: 3
+           assists: 2
+         - position: adc
+           name: WDRJ9999
+           champion: caitlyn
+           kills: 0
+           deaths: 6
+           assists: 3
+         - position: support
+           name: KOTARO666
+           champion: rakan
+           kills: 1
+           deaths: 6
+           assists: 1
+    red:
+      team: RAMS
+      wins: 1
+      players:
+         - position: top
+           name: Rams Preslock
+           champion: galio
+           kills: 3
+           deaths: 2
+           assists: 8
+         - position: jungler
+           name: gazpacho fan N1
+           champion: jarvaniv
+           kills: 0
+           deaths: 1
+           assists: 19
+         - position: mid
+           name: Rams YIIIS
+           champion: cassiopeia
+           kills: 4
+           deaths: 2
+           assists: 6
+         - position: adc
+           name: Rams MeepsOfBard
+           champion: xayah
+           kills: 13
+           deaths: 0
+           assists: 7
+         - position: support
+           name: Rams xKoala
+           champion: nami
+           kills: 0
+           deaths: 0
+           assists: 19
+  - match2:
+    blue:
+      team: RAMS
+      wins: 1
+      players:
+         - position: top
+           name: Rams Preslock
+           champion: rumble
+           kills: 6
+           deaths: 0
+           assists: 12
+         - position: jungler
+           name: gazpacho fan N1
+           champion: kayn
+           kills: 4
+           deaths: 0
+           assists: 10
+         - position: mid
+           name: Rams YIIIS
+           champion: vladimir
+           kills: 5
+           deaths: 0
+           assists: 4
+         - position: adc
+           name: Rams MeepsOfBard
+           champion: tristana
+           kills: 9
+           deaths: 2
+           assists: 4
+         - position: support
+           name: Rams xKoala
+           champion: lulu
+           kills: 0
+           deaths: 0
+           assists: 15
+    red:
+      team: BF
+      wins: 0
+      players:
+         - position: top
+           name: gabogabo97
+           champion: shen
+           kills: 1
+           deaths: 3
+           assists: 1
+         - position: jungler
+           name: BFALC BryanJose
+           champion: sejuani
+           kills: 0
+           deaths: 6
+           assists: 1
+         - position: mid
+           name: FocusMyClon
+           champion: ahri
+           kills: 0
+           deaths: 5
+           assists: 1
+         - position: adc
+           name: WDRJ9999
+           champion: caitlyn
+           kills: 1
+           deaths: 5
+           assists: 1
+         - position: support
+           name: KOTARO666
+           champion: thresh
+           kills: 0
+           deaths: 5
+           assists: 2
