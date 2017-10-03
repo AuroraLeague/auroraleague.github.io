@@ -69,60 +69,69 @@ positions:
             {% assign player_url = "None" %}
             {% assign player_logo = "None" %}
             {% for team in teams %}
-              {% for player in team.players %}
-                {% if player.position == position %}
-                  {% assign kda = 0 %}
-                  {% for game in site.data.games %}
-                    {% for match in game.matches %}
-                      {% for game_player in match.blue.players %}
-                        {% if player.name == game_player.name %}
-                          {% assign matchkda = 0 %}
-                          {% assign matchkda = game_player.kills | plus: game_player.assists %}
-                          {% assign deaths = game_player.deaths %}
-                          {% if deaths == 0 %}
-                            {% assign matchkda = matchkda | times: 2.0 %}
-                          {% else %}
-                            {% assign deaths = deaths | times: 1.0 %}
-                            {% assign matchkda = matchkda | divided_by: deaths %}
-                          {% endif %}
-                          {% if kda == 0 %}
-                            {% assign kda = matchkda %}
-                          {% else %}
-                            {% assign kda = kda | plus: matchkda %}
-                            {% assign kda = kda | divided_by: 2.0 %}
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
-                      {% for game_player in match.red.players %}
-                        {% if player.name == game_player.name %}
-                          {% assign matchkda = 0 %}
-                          {% assign matchkda = game_player.kills | plus: game_player.assists %}
-                          {% assign deaths = game_player.deaths %}
-                          {% if deaths == 0 %}
-                            {% assign matchkda = matchkda | times: 2.0 %}
-                          {% else %}
-                            {% assign deaths = deaths | times: 1.0 %}
-                            {% assign matchkda = matchkda | divided_by: deaths %}
-                          {% endif %}
-                          {% if kda == 0 %}
-                            {% assign kda = matchkda %}
-                          {% else %}
-                            {% assign kda = kda | plus: matchkda %}
-                            {% assign kda = kda | divided_by: 2.0 %}
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
-                    {% endfor %}
-                  {% endfor %}
-                  {% if kda > player_kda %}
-                    {% assign player_name = player.name %}
-                    {% assign player_kda = kda %}
-                    {% assign player_team = team.preface %}
-                    {% assign player_url = team.url %}
-                    {% assign player_logo = team.logo %}
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
+            {% for player in team.players %}
+            {% if player.position == position %}
+            {% assign kda = 0 %}
+            {% assign count = 0 %}
+            {% for game in site.data.games %}
+            {% for match in game.matches %}
+            {% for game_player in match.blue.players %}
+            {% if player.name == game_player.name %}
+            {% assign matchkda = 0 %}
+            {% assign matchkda = game_player.kills | plus: game_player.assists %}
+            {% assign deaths = game_player.deaths %}
+            {% if deaths == 0 %}
+            {% assign matchkda = matchkda | times: 2.0 %}
+            {% else %}
+            {% assign deaths = deaths | times: 1.0 %}
+            {% assign matchkda = matchkda | divided_by: deaths %}
+            {% endif %}
+            {% assign count = count | plus: 1 %}
+            {% if count == 1 %}
+            {% assign kda = matchkda %}
+            {% else %}
+            {% assign lastcount = count | minus: 1 %}
+            {% assign kda = kda | times: lastcount %}
+            {% assign kda = kda | divided_by: count %}
+            {% assign matchkda = matchkda | divided_by: count %}
+            {% assign kda = kda | plus: matchkda %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% for game_player in match.red.players %}
+            {% if player.name == game_player.name %}
+            {% assign matchkda = 0 %}
+            {% assign matchkda = game_player.kills | plus: game_player.assists %}
+            {% assign deaths = game_player.deaths %}
+            {% if deaths == 0 %}
+            {% assign matchkda = matchkda | times: 2.0 %}
+            {% else %}
+            {% assign deaths = deaths | times: 1.0 %}
+            {% assign matchkda = matchkda | divided_by: deaths %}
+            {% endif %}
+            {% assign count = count | plus: 1 %}
+            {% if count == 1 %}
+            {% assign kda = matchkda %}
+            {% else %}
+            {% assign lastcount = count | minus: 1 %}
+            {% assign kda = kda | times: lastcount %}
+            {% assign kda = kda | divided_by: count %}
+            {% assign matchkda = matchkda | divided_by: count %}
+            {% assign kda = kda | plus: matchkda %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+            {% endfor %}
+            {% if kda > player_kda %}
+            {% assign player_name = player.name %}
+            {% assign player_kda = kda %}
+            {% assign player_team = team.preface %}
+            {% assign player_url = team.url %}
+            {% assign player_logo = team.logo %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
             {% endfor %}
             {% assign player_kda = player_kda | round: 2 %}
             <tr>

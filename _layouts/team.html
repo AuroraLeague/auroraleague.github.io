@@ -28,6 +28,7 @@ layout: default
                 <td>{{ player.name }}</td>
                 <td>
                   {% assign kda = 0 %}
+                  {% assign count = 0 %}
                   {% for game in site.data.games %}
                   {% for match in game.matches %}
                   {% for game_player in match.blue.players %}
@@ -41,11 +42,15 @@ layout: default
                   {% assign deaths = deaths | times: 1.0 %}
                   {% assign matchkda = matchkda | divided_by: deaths %}
                   {% endif %}
-                  {% if kda == 0 %}
+                  {% assign count = count | plus: 1 %}
+                  {% if count == 1 %}
                   {% assign kda = matchkda %}
                   {% else %}
+                  {% assign lastcount = count | minus: 1 %}
+                  {% assign kda = kda | times: lastcount %}
+                  {% assign kda = kda | divided_by: count %}
+                  {% assign matchkda = matchkda | divided_by: count %}
                   {% assign kda = kda | plus: matchkda %}
-                  {% assign kda = kda | divided_by: 2.0 %}
                   {% endif %}
                   {% endif %}
                   {% endfor %}
@@ -60,11 +65,15 @@ layout: default
                   {% assign deaths = deaths | times: 1.0 %}
                   {% assign matchkda = matchkda | divided_by: deaths %}
                   {% endif %}
-                  {% if kda == 0 %}
+                  {% assign count = count | plus: 1 %}
+                  {% if count == 1 %}
                   {% assign kda = matchkda %}
                   {% else %}
+                  {% assign lastcount = count | minus: 1 %}
+                  {% assign kda = kda | times: lastcount %}
+                  {% assign kda = kda | divided_by: count %}
+                  {% assign matchkda = matchkda | divided_by: count %}
                   {% assign kda = kda | plus: matchkda %}
-                  {% assign kda = kda | divided_by: 2.0 %}
                   {% endif %}
                   {% endif %}
                   {% endfor %}
