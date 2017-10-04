@@ -1339,3 +1339,151 @@
           kills: 0
           deaths: 1
           assists: 14
+
+- game: 10
+  scores: 1
+  team1:
+    team: REAL LIFE
+    wins: 0
+  team2:
+    team: RAMS
+    wins: 2
+  matches:
+  - match1:
+    blue:
+      team: RAMS
+      wins: 1
+      players:
+        - position: top
+          name: Rams Preslock
+          champion: renekton
+          kills: 2
+          deaths: 5
+          assists: 5
+        - position: jungler
+          name: gazpacho fan N1
+          champion: jarvaniv
+          kills: 5
+          deaths: 2
+          assists: 9
+        - position: mid
+          name: Rams YIIIS
+          champion: taliyah
+          kills: 4
+          deaths: 7
+          assists: 7
+        - position: adc
+          name: Rams MeepsOfBard
+          champion: xayah
+          kills: 6
+          deaths: 2
+          assists: 6
+        - position: support
+          name: Rams xKoala
+          champion: rakan
+          kills: 0
+          deaths: 1
+          assists: 17
+    red:
+      team: REAL LIFE
+      wins: 0
+      players:
+        - position: top
+          name: x MOJONCITO x
+          champion: yasuo
+          kills: 5
+          deaths: 2
+          assists: 4
+        - position: jungler
+          name: ITzCoNejoh
+          champion: gragas
+          kills: 2
+          deaths: 2
+          assists: 5
+        - position: mid
+          name: Këlpië
+          champion: fizz
+          kills: 8
+          deaths: 4
+          assists: 3
+        - position: adc
+          name: ZRasenG
+          champion: tristana
+          kills: 2
+          deaths: 4
+          assists: 5
+        - position: support
+          name: Sëkki
+          champion: janna
+          kills: 0
+          deaths: 5
+          assists: 8
+  - match2:
+    blue:
+      team: RAMS
+      wins: 1
+      players:
+        - position: top
+          name: Rams Preslock
+          champion: shen
+          kills: 2
+          deaths: 2
+          assists: 3
+        - position: jungler
+          name: gazpacho fan N1
+          champion: jarvaniv
+          kills: 2
+          deaths: 5
+          assists: 12
+        - position: mid
+          name: Rams YIIIS
+          champion: vladimir
+          kills: 3
+          deaths: 1
+          assists: 10
+        - position: adc
+          name: Rams MeepsOfBard
+          champion: kogmaw
+          kills: 12
+          deaths: 1
+          assists: 5
+        - position: support
+          name: Rams xKoala
+          champion: lulu
+          kills: 0
+          deaths: 0
+          assists: 15
+    red:
+      team: REAL LIFE
+      wins: 0
+      players:
+        - position: top
+          name: x MOJONCITO x
+          champion: yasuo
+          kills: 2
+          deaths: 3
+          assists: 2
+        - position: jungler
+          name: ITzCoNejoh
+          champion: gragas
+          kills: 3
+          deaths: 4
+          assists: 3
+        - position: mid
+          name: Këlpië
+          champion: ahri
+          kills: 2
+          deaths: 4
+          assists: 1
+        - position: adc
+          name: ZRasenG
+          champion: tristana
+          kills: 2
+          deaths: 3
+          assists: 2
+        - position: support
+          name: Sëkki
+          champion: janna
+          kills: 0
+          deaths: 5
+          assists: 3
