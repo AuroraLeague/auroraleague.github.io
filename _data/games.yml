@@ -428,13 +428,13 @@
           deaths: 6
           assists: 4
         - position: jungler
-          name: xdöku
+          name: egl xdöku
           champion: leesin
           kills: 5
           deaths: 9
           assists: 6
         - position: mid
-          name: j2h nitoking
+          name: egl nitoking
           champion: ahri
           kills: 5
           deaths: 2
@@ -1191,3 +1191,151 @@
            kills: 0
            deaths: 5
            assists: 2
+
+- game: 9
+  scores: 1
+  team1:
+    team: EL
+    wins: 2
+  team2:
+    team: ESC
+    wins: 0
+  matches:
+  - match1:
+    blue:
+      team: ESC
+      wins: 0
+      players:
+        - position: top
+          name: TrckGmr
+          champion: chogath
+          kills: 2
+          deaths: 7
+          assists: 4
+        - position: jungler
+          name: AsianPersuazn
+          champion: kayn
+          kills: 5
+          deaths: 10
+          assists: 5
+        - position: mid
+          name: jaimeintel23
+          champion: lucian
+          kills: 2
+          deaths: 4
+          assists: 8
+        - position: adc
+          name: DAVID HU000
+          champion: varus
+          kills: 4
+          deaths: 6
+          assists: 7
+        - position: support
+          name: diosa del caos
+          champion: janna
+          kills: 0
+          deaths: 4
+          assists: 11
+    red:
+      team: EL
+      wins: 1
+      players:
+        - position: top
+          name: danielbutanero
+          champion: shen
+          kills: 2
+          deaths: 2
+          assists: 19
+        - position: jungler
+          name: egl xdöku
+          champion: jarvaniv
+          kills: 7
+          deaths: 5
+          assists: 19
+        - position: mid
+          name: egl nitoking
+          champion: galio
+          kills: 3
+          deaths: 1
+          assists: 20
+        - position: adc
+          name: bboymiller
+          champion: vayne
+          kills: 18
+          deaths: 3
+          assists: 3
+        - position: support
+          name: kimel
+          champion: lulu
+          kills: 1
+          deaths: 2
+          assists: 25
+  - match2:
+    blue:
+      team: ESC
+      wins: 0
+      players:
+        - position: top
+          name: TrckGmr
+          champion: shen
+          kills: 2
+          deaths: 6
+          assists: 3
+        - position: jungler
+          name: AsianPersuazn
+          champion: warwick
+          kills: 2
+          deaths: 7
+          assists: 3
+        - position: mid
+          name: jaimeintel23
+          champion: galio
+          kills: 1
+          deaths: 4
+          assists: 2
+        - position: adc
+          name: DAVID HU000
+          champion: kalista
+          kills: 5
+          deaths: 5
+          assists: 0
+        - position: support
+          name: diosa del caos
+          champion: nami
+          kills: 0
+          deaths: 2
+          assists: 5
+    red:
+      team: EL
+      wins: 1
+      players:
+        - position: top
+          name: danielbutanero
+          champion: poppy
+          kills: 3
+          deaths: 2
+          assists: 7
+        - position: jungler
+          name: egl xdöku
+          champion: elise
+          kills: 3
+          deaths: 3
+          assists: 10
+        - position: mid
+          name: egl nitoking
+          champion: syndra
+          kills: 8
+          deaths: 3
+          assists: 10
+        - position: adc
+          name: bboymiller
+          champion: tristana
+          kills: 10
+          deaths: 1
+          assists: 5
+        - position: support
+          name: kimel
+          champion: lulu
+          kills: 0
+          deaths: 1
+          assists: 14
