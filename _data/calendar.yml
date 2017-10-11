@@ -69,7 +69,7 @@
             team: RAMS
             wins: 1
           red:
-            team: SWF
+            team: IW
             wins: 1
 
 - week: 2
@@ -120,7 +120,7 @@
             team: TSR
             wins: 0
           red:
-            team: SWF
+            team: IW
             wins: 2
 
 - week: 3
@@ -157,7 +157,7 @@
             team: IGN
             wins: 0
           red:
-            team: SWF
+            team: IW
             wins: 2
         - 1:
           blue:
@@ -212,7 +212,7 @@
             wins: 0
         - 1:
           blue:
-            team: SWF
+            team: IW
             wins: 0
           red:
             team: BF
@@ -270,7 +270,7 @@
             wins: 0
         - 1:
           blue:
-            team: SWF
+            team: IW
             wins: 0
           red:
             team: REAL LIFE

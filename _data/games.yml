@@ -231,7 +231,7 @@
     team: RAMS
     wins: 1
   team2:
-    team: SWF
+    team: IW
     wins: 1
   matches:
   - match1:
@@ -270,7 +270,7 @@
           deaths: 7
           assists: 24
     red:
-      team: SWF
+      team: IW
       wins: 0
       players:
         - position: top
@@ -305,7 +305,7 @@
           assists: 16
   - match2:
     blue:
-      team: SWF
+      team: IW
       wins: 1
       players:
         - position: top
@@ -902,7 +902,7 @@
     team: TSR
     wins: 0
   team2:
-    team: SWF
+    team: IW
     wins: 2
   matches:
   - match1:
@@ -941,7 +941,7 @@
           deaths: 8
           assists: 14
     red:
-      team: SWF
+      team: IW
       wins: 1
       players:
         - position: top
@@ -1010,7 +1010,7 @@
           deaths: 4
           assists: 10
     red:
-      team: SWF
+      team: IW
       wins: 1
       players:
         - position: top
@@ -1498,12 +1498,12 @@
     team: IGN
     wins: 0
   team2:
-    team: SWF
+    team: IW
     wins: 2
   matches:
   - match1:
     blue:
-      team: SWF
+      team: IW
       wins: 1
       players:
         - position: top
@@ -1572,7 +1572,7 @@
           assists: 12
   - match2:
     blue:
-      team: SWF
+      team: IW
       wins: 1
       players:
         - position: top
