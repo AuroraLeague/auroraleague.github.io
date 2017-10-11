@@ -1492,7 +1492,7 @@
           deaths: 5
           assists: 3
 
-- game: 10
+- game: 12
   scores: 1
   team1:
     team: IGN
@@ -1639,3 +1639,12 @@
           kills: 0
           deaths: 5
           assists: 1
+
+- game: 13
+  scores: 1
+  team1:
+    team: TSR
+    wins: 2
+  team2:
+    team: BF
+    wins: 0
