@@ -1792,3 +1792,151 @@
   team2:
     team: BF
     wins: 0
+
+- game: 14
+  scores: 1
+  team1:
+    team: AMILK
+    wins: 0
+  team2:
+    team: TFG
+    wins: 2
+  matches:
+  - match1:
+    blue:
+      team: AMILK
+      wins: 0
+      players:
+        - position: top
+          name: Mungaa
+          champion: renekton
+          kills: 5
+          deaths: 6
+          assists: 8
+        - position: jungler
+          name: Pometa
+          champion: rammus
+          kills: 3
+          deaths: 5
+          assists: 10
+        - position: mid
+          name: AlexSinIch
+          champion: cassiopeia
+          kills: 4
+          deaths: 4
+          assists: 5
+        - position: adc
+          name: Ωμεγα
+          champion: tristana
+          kills: 2
+          deaths: 5
+          assists: 6
+        - position: support
+          name: NodEtt
+          champion: lulu
+          kills: 2
+          deaths: 10
+          assists: 6
+    red:
+      team: TFG
+      wins: 1
+      players:
+        - position: top
+          name: Godyr G2
+          champion: riven
+          kills: 6
+          deaths: 6
+          assists: 7
+        - position: jungler
+          name: WTB HellLanD
+          champion: amumu
+          kills: 8
+          deaths: 3
+          assists: 12
+        - position: mid
+          name: matheuserono
+          champion: orianna
+          kills: 6
+          deaths: 1
+          assists: 11
+        - position: adc
+          name: ascuos
+          champion: caitlyn
+          kills: 6
+          deaths: 3
+          assists: 18
+        - position: support
+          name: Im Zed Buddy
+          champion: janna
+          kills: 4
+          deaths: 3
+          assists: 21
+  - match2:
+    blue:
+      team: TFG
+      wins: 1
+      players:
+        - position: top
+          name: Godyr G2
+          champion: riven
+          kills: 11
+          deaths: 2
+          assists: 5
+        - position: jungler
+          name: WTB HellLanD
+          champion: amumu
+          kills: 3
+          deaths: 2
+          assists: 13
+        - position: mid
+          name: matheuserono
+          champion: malzahar
+          kills: 5
+          deaths: 0
+          assists: 2
+        - position: adc
+          name: ascuos
+          champion: jinx
+          kills: 10
+          deaths: 3
+          assists: 8
+        - position: support
+          name: Im Zed Buddy
+          champion: janna
+          kills: 2
+          deaths: 2
+          assists: 5
+    red:
+      team: AMILK
+      wins: 0
+      players:
+        - position: top
+          name: Mungaa
+          champion: fiora
+          kills: 3
+          deaths: 9
+          assists: 0
+        - position: jungler
+          name: Pometa
+          champion: ivern
+          kills: 3
+          deaths: 1
+          assists: 4
+        - position: mid
+          name: AlexSinIch
+          champion: vladimir
+          kills: 3
+          deaths: 5
+          assists: 1
+        - position: adc
+          name: Ωμεγα
+          champion: caitlyn
+          kills: 2
+          deaths: 7
+          assists: 2
+        - position: support
+          name: NodEtt
+          champion: thresh
+          kills: 0
+          deaths: 7
+          assists: 5

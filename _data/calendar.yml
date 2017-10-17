@@ -200,7 +200,7 @@
             wins: 0
           red:
             team: TFG
-            wins: 0
+            wins: 2
     - group: B
       matches:
         - 1:
