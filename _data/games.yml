@@ -1639,6 +1639,15 @@
 - game: 12
   scores: 1
   team1:
+    team: AMILK
+    wins: 2
+  team2:
+    team: ESC
+    wins: 0
+
+- game: 13
+  scores: 1
+  team1:
     team: IGN
     wins: 0
   team2:
@@ -1784,7 +1793,7 @@
           deaths: 5
           assists: 1
 
-- game: 13
+- game: 14
   scores: 1
   team1:
     team: TSR
@@ -1793,7 +1802,7 @@
     team: BF
     wins: 0
 
-- game: 14
+- game: 15
   scores: 1
   team1:
     team: AMILK
