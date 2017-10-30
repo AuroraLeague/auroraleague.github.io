@@ -30,13 +30,7 @@ preface: Calendario de los partidos
 				{% for week in site.data.calendar %}
 				<div id="Week{{ week.week }}" class="tabcontent">
 					<h5>{{ week.date }}</h5>
-					<p>Todos los partidos se jugaran BO2</p>
-					<ul>
-						<li>Ganar ambos partidos: 3 puntos</li>
-						<li>Empatar: 1 punto para cada equipo</li>
-						<li>Perder ambos partidos: 0 puntos</li>
-					</ul>
-					<p>Despues de cada partido se cambian los lados</p>
+					{{ week.info }}
 					{% for group in week.groups %}
 					<h5>Group {{ group.group }}</h5>
 					<table class="week-table">

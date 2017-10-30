@@ -24,6 +24,7 @@
 - week: 1
   actual: 0
   date: 18-09-2017 - 24-09-2017
+  info: "<p>Todos los partidos se jugaran BO2</p><ul><li>Ganar ambos partidos: 3 puntos</li><li>Empatar: 1 punto para cada equipo</li><li>Perder ambos partidos: 0 puntos</li></ul><p>Despues de cada partido se cambian los lados</p>"
   groups:
     - group: A
       matches:
@@ -75,6 +76,7 @@
 - week: 2
   actual: 0
   date: 25-09-2017 - 01-10-2017
+  info: "<p>Todos los partidos se jugaran BO2</p><ul><li>Ganar ambos partidos: 3 puntos</li><li>Empatar: 1 punto para cada equipo</li><li>Perder ambos partidos: 0 puntos</li></ul><p>Despues de cada partido se cambian los lados</p>"
   groups:
     - group: A
       matches:
@@ -126,6 +128,7 @@
 - week: 3
   actual: 0
   date: 02-10-2017 - 08-10-2017
+  info: "<p>Todos los partidos se jugaran BO2</p><ul><li>Ganar ambos partidos: 3 puntos</li><li>Empatar: 1 punto para cada equipo</li><li>Perder ambos partidos: 0 puntos</li></ul><p>Despues de cada partido se cambian los lados</p>"
   groups:
     - group: A
       matches:
@@ -177,6 +180,7 @@
 - week: 4
   actual: 0
   date: 09-10-2017 - 15-10-2017
+  info: "<p>Todos los partidos se jugaran BO2</p><ul><li>Ganar ambos partidos: 3 puntos</li><li>Empatar: 1 punto para cada equipo</li><li>Perder ambos partidos: 0 puntos</li></ul><p>Despues de cada partido se cambian los lados</p>"
   groups:
     - group: A
       matches:
@@ -226,8 +230,9 @@
             wins: 0
 
 - week: 5
-  actual: 1
+  actual: 0
   date: 16-10-2017 - 22-10-2017
+  info: "<p>Todos los partidos se jugaran BO2</p><ul><li>Ganar ambos partidos: 3 puntos</li><li>Empatar: 1 punto para cada equipo</li><li>Perder ambos partidos: 0 puntos</li></ul><p>Despues de cada partido se cambian los lados</p>"
   groups:
     - group: A
       matches:
@@ -274,4 +279,19 @@
             wins: 0
           red:
             team: REAL LIFE
+            wins: 0
+
+- week: Desempate
+  actual: 1
+  date: 30-10-2017 - 5-11-2017
+  info: "<p>Todos los partidos se jugaran BO3</p></ul><p>Despues de cada partido se cambian los lados</p>"
+  groups:
+    - group: B
+      matches:
+        - 1:
+          blue:
+            team: RAMS
+            wins: 0
+          red:
+            team: IW
             wins: 0
